@@ -20,4 +20,10 @@ server.get("/hobbits", (req, res) => {
     });
 });
 
+server.post("/hobbits", (req, res) => {
+  // add the hobbit to the db
+  // return 201 on success
+  // should return a message saying "Hobbit created successfully"
+});
+
 module.exports = server;

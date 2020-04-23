@@ -13,6 +13,20 @@ Please follow along as the instructor adds automated tests to the API.
 
 ## Deploy to Heroku Using PostgreSQL
 
+- new app
+- connect it
 - add the Heroku Postgres Add On (under settings) to the application on Heroku.
 - add the `pg` npm package
 - configure the `production` property on knexfile.js to use `pg` and the `process.env.DATABASE_URL` variable as the connection.
+- Resources > postgres > provision
+- commit and push > should deploy
+- refresh app, should still work
+- Time to add postgres configuration for the database
+- change knexfile
+- add 'pg' package
+- show settings > reveal config files DATABASE_URL
+- commit and push 'adds production db config'
+- deployed, still reading the development database
+- open dbConfig, we use DB_ENV
+- add this environment variable to heroku
+- fails because hobbits table does not exist in heroku
